@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact KBS Onliners for URA, URSB, document readiness, and online service support in Uganda.">
+  <title>Contact | KBS Onliners</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">KBS</span><span><strong>KBS Onliners</strong><small>URA & URSB Service Desk</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" data-nav-links>
+        <a href="index.html">Home</a><a href="services.html">Services</a><a href="ura.html">URA Help</a><a href="ursb.html">URSB Help</a><a href="testimonials.html">Reviews</a><a href="faq.html">FAQ</a><a class="active nav-cta" href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">Contact</p>
+      <h1>Send your inquiry to KBS Onliners.</h1>
+      <p>The form prepares a secure WhatsApp message on your device. It does not store details on this website.</p>
+    </section>
+
+    <section class="section contact-layout">
+      <form class="contact-form" data-contact-form novalidate>
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required minlength="2">
+          <small class="error-message"></small>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+256...">
+          <small class="error-message"></small>
+        </div>
+        <div class="form-row">
+          <label for="service">Service needed</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>URA support</option>
+            <option>URSB support</option>
+            <option>Document readiness</option>
+            <option>General online inquiry</option>
+          </select>
+          <small class="error-message"></small>
+        </div>
+        <div class="form-row">
+          <label for="message">Inquiry details</label>
+          <textarea id="message" name="message" rows="6" required minlength="10" placeholder="Briefly describe what you need. Do not include passwords or PINs."></textarea>
+          <small class="error-message"></small>
+        </div>
+        <button class="button primary" type="submit">Send through WhatsApp</button>
+        <p class="form-note" data-form-note aria-live="polite">Your message will open in WhatsApp for review before sending.</p>
+      </form>
+
+      <aside class="contact-card">
+        <h2>Direct WhatsApp</h2>
+        <p>For the fastest response, contact the owner directly.</p>
+        <a class="button secondary" href="https://wa.me/256779682856?text=Hello%20KBS%20Onliners%2C%20I%20need%20help." target="_blank" rel="noopener">+256 779 682 856</a>
+        <hr>
+        <h3>Before sending</h3>
+        <ul>
+          <li>Do not share passwords or PINs.</li>
+          <li>Describe the service you need.</li>
+          <li>Mention any official reference number only when relevant.</li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/256779682856?text=Hello%20KBS%20Onliners%2C%20I%20need%20help." target="_blank" rel="noopener" aria-label="Chat with KBS Onliners on WhatsApp">WhatsApp</a>
+  <footer class="site-footer"><div><strong>KBS Onliners</strong><p>Independent online assistance for URA and URSB service users.</p></div><div><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="https://wa.me/256779682856" target="_blank" rel="noopener">WhatsApp</a><a href="admin.html">Admin</a></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

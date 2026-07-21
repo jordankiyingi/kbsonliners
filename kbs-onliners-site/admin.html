@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KBS Onliners admin dashboard for updating site content in the browser.">
+  <title>Admin | KBS Onliners</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">KBS</span><span><strong>KBS Onliners</strong><small>URA & URSB Service Desk</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" data-nav-links>
+        <a href="index.html">Home</a><a href="services.html">Services</a><a href="ura.html">URA Help</a><a href="ursb.html">URSB Help</a><a href="testimonials.html">Reviews</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a class="active nav-cta" href="admin.html">Admin</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero admin-hero">
+      <p class="eyebrow">Site admin</p>
+      <h1>Update KBS Onliners content from one dashboard.</h1>
+      <p>This static admin panel saves changes in this browser. It is ideal for previews and local updates; use a backend or hosted CMS for secure multi-device production editing.</p>
+    </section>
+
+
+    <section class="section admin-auth-card" data-admin-auth>
+      <div>
+        <p class="eyebrow">Admin login</p>
+        <h2>Sign in before saving online changes.</h2>
+        <p data-auth-status>Checking admin session...</p>
+      </div>
+      <form class="auth-form" data-auth-form>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+        <button class="button primary" type="submit">Sign in</button>
+        <button class="button secondary" type="button" data-auth-signout>Sign out</button>
+      </form>
+    </section>
+    <section class="section admin-layout">
+      <aside class="admin-sidebar" aria-label="Admin sections">
+        <button class="active" type="button" data-admin-tab="settings">Site settings</button>
+        <button type="button" data-admin-tab="announcement">Announcement</button>
+        <button type="button" data-admin-tab="testimonials">Testimonials</button>
+        <button type="button" data-admin-tab="faqs">FAQs</button>
+        <button type="button" data-admin-tab="export">Backup</button>
+      </aside>
+
+      <form class="admin-panel" data-admin-form>
+        <section class="admin-tab active" data-admin-panel="settings">
+          <h2>Site settings</h2>
+          <div class="admin-grid">
+            <label>Business name<input name="businessName" type="text" required></label>
+            <label>Brand tagline<input name="tagline" type="text" required></label>
+            <label>WhatsApp number<input name="whatsappNumber" type="tel" required></label>
+            <label>Home eyebrow<input name="heroEyebrow" type="text" required></label>
+          </div>
+          <label>Home headline<textarea name="heroTitle" rows="3" required></textarea></label>
+          <label>Home intro text<textarea name="heroText" rows="4" required></textarea></label>
+        </section>
+
+        <section class="admin-tab" data-admin-panel="announcement">
+          <h2>Announcement</h2>
+          <label class="toggle-row"><input name="announcementEnabled" type="checkbox"> Show announcement on public pages</label>
+          <label>Announcement title<input name="announcementTitle" type="text"></label>
+          <label>Announcement text<textarea name="announcementText" rows="4"></textarea></label>
+        </section>
+
+        <section class="admin-tab" data-admin-panel="testimonials">
+          <div class="admin-section-title">
+            <h2>Testimonials</h2>
+            <button class="button secondary" type="button" data-add-testimonial>Add review</button>
+          </div>
+          <div class="repeat-list" data-testimonial-editor></div>
+        </section>
+
+        <section class="admin-tab" data-admin-panel="faqs">
+          <div class="admin-section-title">
+            <h2>FAQs</h2>
+            <button class="button secondary" type="button" data-add-faq>Add FAQ</button>
+          </div>
+          <div class="repeat-list" data-faq-editor></div>
+        </section>
+
+        <section class="admin-tab" data-admin-panel="export">
+          <h2>Backup and restore</h2>
+          <p class="admin-help">Export a JSON backup before making major edits. Restore replaces the content saved in this browser.</p>
+          <label>Content JSON<textarea name="contentJson" rows="12" spellcheck="false"></textarea></label>
+          <div class="admin-actions left">
+            <button class="button secondary" type="button" data-export-content>Refresh JSON</button>
+            <button class="button secondary" type="button" data-import-content>Restore from JSON</button>
+          </div>
+        </section>
+
+        <div class="admin-actions">
+          <button class="button secondary" type="button" data-reset-content>Reset defaults</button>
+          <a class="button secondary" href="index.html">View site</a>
+          <button class="button primary" type="submit">Save updates</button>
+        </div>
+        <p class="form-note" data-admin-note aria-live="polite">Edit fields and save to update this browser preview.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div><strong>KBS Onliners</strong><p>Independent online assistance for URA and URSB service users.</p></div><div><a href="index.html">Home</a><a href="contact.html">Contact</a><a href="admin.html">Admin</a></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
